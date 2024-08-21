@@ -1,0 +1,96 @@
+{% extends "inicio/encabezado.html" %} 
+{% block titulo %}Contacto{% endblock %}
+{% block contenido %}
+         <!-- service section -->
+{%load static%}
+<section class="portfolio_section layout_padding">
+  <div class="container">
+    <div class="custom_heading-container">
+      <h2>
+        Contactanos
+      </h2>
+      <hr>
+    </div>
+  </div>
+</section>
+
+<section class="service_section layout_padding">
+    <div class="container">
+      <div class="service_container layout_padding2">
+        <a href="">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'inicio/images/icons8-instagram-96.png'%}"alt="" class="img-1">
+              <img src="{% static 'inicio/images/icons8-instagram-96.png'%}" alt="" class="img-2">
+            </div>
+            <div class="name">
+              <h6>
+                Instagram
+              </h6>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'inicio/images/icons8-facebook-144.png'%}" alt="" class="img-1">
+              <img src= "{% static 'inicio/images/icons8-facebook-144.png'%}"alt="" class="img-2">
+            </div>
+            <div class="name">
+              <h6>
+                Facebook
+              </h6>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'inicio/images/icons8-twitter-96.png'%}" alt="" class="img-1">
+              <img src="{% static 'inicio/images/icons8-twitter-96.png'%}" alt="" class="img-2">
+            </div>
+            <div class="name">
+              <h6>
+                Twitter
+              </h6>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'inicio/images/icons8-whatsapp-96.png'%}" alt="" class="img-1">
+              <img src="{% static 'inicio/images/icons8-whatsapp-96.png'%}" alt="" class="img-2">
+            </div>
+            <div class="name">
+              <h6>
+                Whatsapp
+              </h6>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'inicio/images/icons8-mail-96.png'%}"alt="" class="img-1">
+              <img src="{% static 'inicio/images/icons8-mail-96.png'%}" alt="" class="img-2">
+            </div>
+            <div class="name">
+              <h6>
+                Correo
+              </h6>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- end portfolio section -->
+
+
+
+  <!-- end info_section -->
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}
+Registrarse
+{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<section class="portfolio_section layout_padding">
+    <div class="container">
+        <div class="custom_heading-container">
+            <div class="container1">
+                <h2>Crear una Cuenta</h2>
+                <a class="nav-link" href="{%url 'login'%}">¿Ya estás registrado? Iniciar Sesión</a>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+</section>
+
+{% endblock %}

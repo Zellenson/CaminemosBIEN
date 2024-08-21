@@ -1,0 +1,25 @@
+{% extends "inicio/encabezado.html" %}
+
+{% block titulo %}Detalles de Usuarios{% endblock %}
+
+{% block contenido %}
+<div class="container py-5">
+    <h1>Usuarios Registrados</h1>
+    <div class="row">
+        {% for usuario in usuarios %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{ usuario.nombre }}</h5>
+                    <p class="card-text"><strong>Ciudad:</strong> {{ usuario.ciudad }}</p>
+                    <p class="card-text"><strong>Estado:</strong> {{ usuario.estado }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No hay usuarios registrados.</p>
+        {% endfor %}
+    </div>
+    <a href="{% url 'Tours' %}" class="btn btn-primary">Regresar a tours</a>
+</div>
+{% endblock %}

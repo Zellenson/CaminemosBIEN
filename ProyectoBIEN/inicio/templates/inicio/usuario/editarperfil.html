@@ -1,0 +1,74 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Editar Perfil{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<div class="container4">
+    <h2>Editar Perfil</h2>
+    <form id="perfilForm" enctype="multipart/form-data" action="{% url 'Editar Perfil' %}" method="POST">
+        {% csrf_token %}
+        
+        <div class="profile-picture-container3">
+            <img id="profilePicture" src="{% if form.instance.imagen %}{{ form.instance.imagen.url }}{% else %}{% static 'images/default-profile.png' %}{% endif %}" alt="Foto de perfil" class="profile-picture">
+            <input type="file" id="profilePictureInput" name="imagen" accept="image/*" style="display: none;" onchange="previewImage(event)">
+            <button type="button" class="upload-button" onclick="document.getElementById('profilePictureInput').click();">Cambiar Imagen</button>
+        </div>
+        
+        
+        <div class="profile-fields3">
+            <!-- Renderiza los campos del formulario individualmente -->
+            <div class="form-group">
+                <label for="{{ form.nombre.id_for_label }}">Nombre:</label>
+                {{ form.nombre }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.apellidos.id_for_label }}">Apellidos:</label>
+                {{ form.apellidos }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.telefono.id_for_label }}">Teléfono:</label>
+                {{ form.telefono }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Correo:</label>
+                {{ form.email }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.ciudad.id_for_label }}">Ciudad:</label>
+                {{ form.ciudad }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.estado.id_for_label }}">Estado:</label>
+                {{ form.estado }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.tarjeta.id_for_label }}">Número de Cuenta:</label>
+                {{ form.tarjeta }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.cvv.id_for_label }}">CVV:</label>
+                {{ form.cvv }}
+            </div>
+            
+            <div class="form-group">
+                <label for="{{ form.caducidad.id_for_label }}">Fecha de Caducidad:</label>
+                {{ form.caducidad }}
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button type="submit">Confirmar</button>
+            <a href="{% url 'Perfil Usuario' %}" class="button">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
+

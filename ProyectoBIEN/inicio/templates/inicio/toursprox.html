@@ -1,0 +1,36 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Tours Proximos{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<div class="container-fluid py-5">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-3 pb-3">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Nuestros Proximos Tours</h6>
+            <h1>Elige tu paquete perfecto</h1>
+        </div>
+        <div class="row">
+            {% for tour in tours %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white mb-2" style="border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img class="img-media" src="{{ tour.imagen.url }}" alt="" style="width: 100%; height: auto; min-height: 250px; object-fit: cover; border-radius: 5px;">
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>{{ tour.destino }}</small>
+                        </div>
+                        <a class="h5 text-decoration-none" href="{% url 'detalle_tour' tour_id=tour.id %}">{{ tour.descripcion }}</a>
+                        <div class="border-top mt-4 pt-4">
+                            <div class="d-flex justify-content-between">
+                                <a class="h5 text-decoration-none" href="{% url 'FormTour' %}">Reserva Ahora</a>
+                                <h5 class="m-0">${{ tour.precio }}</h5>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
