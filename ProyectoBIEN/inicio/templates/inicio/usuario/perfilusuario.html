@@ -1,0 +1,47 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Perfil{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<div class="container4">
+  <h2>Perfil</h2>
+  
+  {% if user.is_authenticated %}
+    <div class="profile-picture-container3">
+      {% if usuario.imagen %}
+        <img id="profilePicture" src="{{ usuario.imagen.url }}" alt="Foto de perfil" class="profile-picture">
+      {% else %}
+        <div class="default-profile">
+          <p>Foto de perfil</p>
+        </div>
+      {% endif %}
+    </div>
+    <div class="profile-fields3">
+      <p>Nombre: {{ usuario.nombre }}</p>
+      <p>Apellidos: {{ usuario.apellidos }}</p>
+      <p>Teléfono: {{ usuario.telefono }}</p>
+      <p>Correo: {{ usuario.email }}</p>
+      <p>Ciudad: {{ usuario.ciudad }}</p>
+      <p>Estado: {{ usuario.estado }}</p>
+      <p>Número de Cuenta: {{ usuario.tarjeta }}</p>
+      <p>CVV: {{ usuario.cvv }}</p>
+      <p>Fecha de Caducidad: {{ usuario.caducidad }}</p>
+    </div>
+    
+    <div class="button-container">
+      <a href="{% url 'Editar Perfil' %}">
+        <button type="button">Editar Perfil</button>
+      </a>
+      <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+      </form>
+    </div>
+
+  {% else %}
+    <p>Debes <a href="{% url 'login' %}">iniciar sesión</a> para ver tu perfil.</p>
+  {% endif %}
+  
+</div>
+
+{% endblock %}

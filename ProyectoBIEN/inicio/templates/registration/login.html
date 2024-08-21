@@ -1,0 +1,21 @@
+{% extends "inicio/encabezado.html" %}
+{% block titulo %}Formulario{% endblock %}
+{% block contenido %}
+{% load static %}
+
+<section class="portfolio_section layout_padding">
+  <div class="container">
+    <div class="custom_heading-container">
+      <div class="container1">
+        <h2>Inicio de Sesión</h2>
+        <a class="nav-link" href="{% url 'Registro' %}">¿No tienes cuenta? Registrate</a>
+        <form action="" method="post">
+          {% csrf_token %}
+          {{ form }}
+          <button type="submit">Iniciar Sesión</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

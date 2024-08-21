@@ -1,0 +1,168 @@
+{% extends "inicio/encabezado.html" %}{%block titulo%}Tours{%endblock%}
+{% block contenido %}
+{%load static%}
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src={%static  "Inicio/images/yucatan.jpg" %} style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Tours BIEN</h6>
+                        <h1 class="mb-3">Nuestros Tours Realizados</h1>
+                        <p>Explora la Magia de los Estados de México con Nuestros Tours Exclusivos
+
+                            Descubre la riqueza cultural, histórica y natural de los estados de México a través de nuestros tours cuidadosamente diseñados. Desde las imponentes pirámides de Teotihuacán hasta las playas doradas de la costa del Pacífico, nuestros recorridos te llevarán a los lugares más emblemáticos y a las joyas ocultas que solo los locales conocen.</p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img class="img-fluid" src={%static  "Inicio/images/fondo.jpg" %} alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src={%static  "Inicio/images/Ixtapa.jpeg" %} alt="">
+                            </div>
+                        </div>
+                        <a href="{%url 'toursprox'%}" class="btn btn-primary mt-1">Proximos Tours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Packages Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5 pb-3">
+            <div class="text-center mb-3 pb-3">
+                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Destinos</h6>
+                <h1>Tours Finalizados</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/lago.jpg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Tacambaro</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>22/06/2024</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>24 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Hemos explorado el encantador pueblo de Michoacán, disfrutando de su arquitectura colonial y los hermosos paisajes montañosos.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(15)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/Campeche.jpeg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Campeche</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>15/05/2024</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>18 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Nuestro tour Campeche fue una inmersión en la historia y la belleza costera. Exploramos la ciudad, admirando su arquitectura colonial</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.8 <small>(10)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/Morelia.jpeg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Morelia</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>14/02/2024</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>30 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Nuestro tour en Morelia reveló la riqueza histórica y cultural. Recorremos las impresionantes calles y admiramos la majestuosa Catedral</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.9 <small>(20)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/CañonDelSumidero.jpeg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Chiapas</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>30/12/2023</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>24 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Nuestro tour por el Cañón del Sumidero fue una aventura impresionante. Navegamos por el río Grijalva, rodeados de imponentes acantilados y exuberante vegetación.</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.4 <small>(16)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/Guanajuato.jpeg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Guanajuato</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>29/10/2023</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>32 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Nuestro tour por Guanajuato fue un viaje lleno de historia y color. Paseamos por las calles y exploramos el legendario Callejón del Beso</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.1 <small>(23)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="package-item bg-white mb-2">
+                        <img class="img-fluid" src={%static  "Inicio/images/Palenque.jpeg" %} alt="">
+                        <div class="p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Palenque</small>
+                                <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>12/10/2023</small>
+                                <small class="m-0"><i class="fa fa-user text-primary mr-2"></i>42 Personas</small>
+                            </div>
+                            <a class="h5 text-decoration-none" href="{%url 'finish' %}">Nuestro tour por Palenque fue un viaje al corazón de la antigua civilización maya. Exploramos las majestuosas ruinas escondidas en la selva</a>
+                            <div class="border-top mt-4 pt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.0 <small>(32)</small></h6>
+                                    <h5 class="m-0">Concluido</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Packages End -->
+
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+{% endblock %}

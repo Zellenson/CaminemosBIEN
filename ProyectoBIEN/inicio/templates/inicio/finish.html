@@ -1,0 +1,88 @@
+{% extends "inicio/encabezado.html" %}
+{% load static %}
+{% block titulo %}Tour Terminado{% endblock %}
+
+{% block contenido %}
+
+<!-- Blog Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row">
+            <!-- Blog Detail Start -->
+            <div class="col-12">
+                <div class="bg-white mb-3 p-4 rounded shadow-sm">
+                    <div class="d-flex mb-3">
+                        <a class="text-primary text-uppercase text-decoration-none" href="{% url 'Acerca' %}">Acerca</a>
+                        <span class="text-primary px-2">|</span>
+                        <a class="text-primary text-uppercase text-decoration-none" href="{% url 'Principal' %}">CaminemosBIEN</a>
+                    </div>
+                    <h2 class="mb-4">Tour Finalizado</h2>
+                    <hr>
+                    <p>
+                        Queremos agradecerte sinceramente por participar en nuestros tours a través de CaminamosBien. 
+                        Nos alegra mucho que hayas elegido explorar con nosotros y esperamos que hayas disfrutado de la experiencia.
+                    </p>
+                    <p>
+                        Nuestros tours están diseñados para ofrecerte lo mejor en cada rincón que visitamos, y tu presencia ha sido fundamental 
+                        para que podamos continuar brindando experiencias únicas y memorables. Si tienes alguna sugerencia o comentario sobre 
+                        tu experiencia, no dudes en compartirlo con nosotros; siempre estamos buscando maneras de mejorar.
+                    </p>
+                    <p>
+                        Esperamos tener el placer de acompañarte en futuras aventuras.
+                    </p>
+                    <p>
+                        ¡Gracias nuevamente y hasta la próxima!
+                    </p>
+                    <p class="text-end"><strong>Atentamente,<br>El equipo de CaminamosBien</strong></p>
+                </div>
+            </div>
+            <!-- Blog Detail End -->
+
+            <!-- Comentarios Start -->
+           <!-- Comentarios Start -->
+<div class="col-12 mt-4">
+    <div class="bg-light p-4 rounded shadow-sm">
+        <h3 class="mb-4">Comentarios</h3>
+        <div class="mb-3">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <!-- Imagen del comentario -->
+                        <img src="{% static 'inicio/images/user.jpg' %}" width="150" height="auto" class="img-fluid rounded-start" alt="Imagen del comentario">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Erick</h5>
+                            <p class="card-text">¡Excelente experiencia! El tour con CaminamosBien superó todas mis expectativas. La organización fue impecable y la guía era muy conocedora y apasionada por el lugar. Aprendí mucho y disfruté cada momento. Definitivamente, recomendaré sus tours a amigos y familiares. Gracias por hacer de este viaje una experiencia tan memorable.</p>
+                            <p class="card-text"><small class="text-muted">Publicado el 20 de agosto de 2024</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <!-- Imagen del comentario -->
+                        <img src="{% static 'inicio/images/testimonial-1.jpg' %}" width="150" height="auto" class="img-fluid rounded-start" alt="Imagen del comentario">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Nicolas</h5>
+                            <p class="card-text">El tour con CaminamosBien fue fantástico. La atención al detalle y el entusiasmo del guía hicieron que cada paso del recorrido fuera interesante y educativo. Las paradas estaban bien elegidas y el ritmo perfecto. Me sentí bien cuidado y valorado como cliente. Sin duda, volveré para explorar más con ustedes. ¡Gracias por una experiencia tan agradable!</p>
+                            <p class="card-text"><small class="text-muted">Publicado el 19 de agosto de 2024</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Comentarios End -->
+
+            <!-- Comentarios End -->
+        </div>
+    </div>
+</div>
+<!-- Blog End -->
+
+{% endblock %}
